@@ -1,0 +1,489 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+html {
+scroll-behavior: smooth;
+}
+
+
+/* Hero Section */
+.hero-section {
+    background: #4a4a4a;
+    height: 87vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-content {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+/* Sections Styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services-section,
+.skills-section,
+.projects-section,
+.testimonials-section,
+.highlight-section {
+    background: #f4f4f4;
+}
+ /* Services Section */
+ .services-section {
+    background: linear-gradient(90deg, #4a4a4a, #b6b6b6);
+    color: #fff;
+    padding: 60px 20px;
+    border-radius: 0px 20px 0px 20px;
+    text-align: center;
+    margin: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.services-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+/*Project section*/
+.projects-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.coming-soon {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.letter {
+    display: inline-block; /* لتمكين الحركة */
+    transition: transform 0.8s ease; /* تأثير الانتقال */
+}
+
+/* تأثير القفز عند المرور بالمؤشر */
+.coming-soon:hover .letter {
+    animation: jump 0.5s forwards; /* تطبيق الحركة */
+}
+
+/* تعريف الحركة */
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px); /* قفز للأعلى */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/*testimonials section*/
+.testimonials {
+text-align: center;
+padding: 50px;
+background-color: #f9f9f9;
+}
+
+.testimonials h2 {
+font-size: 2.5rem;
+margin-bottom: 30px;
+}
+
+.testimonial-grid {
+display: grid;
+grid-template-columns: repeat(3, minmax(250px, 1fr));
+gap: 20px;
+margin: 0 5%;
+}
+
+.testimonial-item {
+background: white;
+border-radius: 10px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+transition: transform 0.3s;
+}
+
+.testimonial-item:hover {
+transform: translateY(-5px);
+}
+
+.testimonial-image {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+background-color: #ccc; /* Placeholder for images */
+margin: 0 auto 10px;
+}
+
+.testimonial-item p {
+font-size: 1rem;
+margin: 10px 0;
+}
+
+.testimonial-item h6 {
+font-size: 1.2rem;
+color: #333;
+}
+/* Highlight Section */
+.highlight-section {
+padding: 60px 20px;
+background: #f4f4f4;
+text-align: center;
+}
+
+
+/* تصميم البطاقة */
+.highlight-card {
+position: relative;
+background: linear-gradient(135deg, #4a4a4a, #b6b6b6); /* تدرج الألوان */
+color: white;
+padding: 20px;
+border-radius: 20px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+overflow: hidden; /* لإخفاء التأثيرات التي تتجاوز الحدود */
+text-align: left;
+font-family: Arial, sans-serif;
+cursor: pointer; /* إشارة اليد لكون العنصر قابل للضغط */
+transition: box-shadow 0.3s ease;
+}
+.highlight-card h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-left: 40%;
+}
+
+.highlight-card p {
+font-size: 1.2rem;
+margin-bottom: 20px;
+}
+
+/* إضافة تأثير الإضاءة المتحركة */
+.highlight-card::before {
+content: '';
+position: absolute;
+top: 0;
+left: -100%; /* ابدأ من خارج الحدود اليسرى */
+width: 100%;
+height: 100%;
+background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
+transition: left 0.8s ease; /* انتقال سلس */
+}
+
+/* تأثير الضغط */
+.highlight-card:active::before {
+left: 100%; /* تتحرك الإضاءة من اليسار إلى اليمين عند الضغط */
+}
+
+/* إضافة تأثير صغير للظل عند الضغط */
+.highlight-card:active {
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+/* Skills Section */
+.skills-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* توزيع المهارات على عمودين */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill {
+    text-align: left;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+}
+
+.skill h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.progress {
+    height: 20px;
+    background-color: #28a745;
+     /* يبدأ بعرض كامل */
+    transition: width 0.5s ease; /* تغير الزمن هنا حسب الرغبة */
+}
+/* Animation when clicking */
+.skill.active .progress {
+    width: 0; /* اجعل العرض 0 عند الضغط */
+}
+.skill.active .progress[data-progress="90"] {
+    animation: fill90 2s forwards;
+}
+.skill.active .progress[data-progress="85"] {
+    animation: fill85 2s forwards;
+}
+.skill.active .progress[data-progress="75"] {
+    animation: fill75 2s forwards;
+}
+.skill.active .progress[data-progress="70"] {
+    animation: fill70 2s forwards;
+}
+/* الأنيميشين */
+@keyframes fill90 {
+    from { width: 0; }
+    to { width: 90%; }
+}
+
+@keyframes fill85 {
+    from { width: 0; }
+    to { width: 85%; }
+}
+
+@keyframes fill75 {
+    from { width: 0; }
+    to { width: 75%; }
+}
+
+@keyframes fill70 {
+    from { width: 0; }
+    to { width: 70%; }
+}
+/* Footer Styles */
+.footer {
+background-color: #333;
+color: #fff;
+padding: 20px 0;
+text-align: center;
+}
+
+.footer-container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.social-icons {
+margin-bottom: 15px;
+}
+
+.social-icons .icon {
+width: 90px;
+margin: 0 10px;
+transition: transform 0.3s;
+cursor: pointer;
+}
+
+.social-icons .icon:hover {
+transform: scale(1.1);
+}
+
+.social-icons .icon:active {
+transform: translateY(-5px); /* يجعل الأيقونة تقفز للأعلى قليلاً عند الضغط */
+}
+
+.footer-links {
+list-style: none;
+padding: 0;
+margin: 10px 0;
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+
+.footer-links li {
+display: inline;
+}
+
+.footer-links a {
+text-decoration: none;
+color: white;
+font-weight: bold;
+transition: color 0.3s;
+}
+
+.footer-links a:hover {
+color: #007bff;
+}
+
+.footer-text {
+color: #777;
+margin-top: 10px;
+font-size: 14px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: row;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .image-content {
+        justify-content: flex-start;
+    }
+     /* Responsive Services Section */
+     .services-section h2 {
+        font-size: 2rem;
+    }
+    .image-content img{
+        margin-top: 11%;
+    }
+
+    .services-section p {
+        font-size: 1rem;
+        line-height: 1.4;
+        padding: 0 20px;
+    }
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items in a row */
+}
+.highlight-card {
+padding:15px;
+    }
+.skills-container {
+        grid-template-columns: 1fr; /* عمود واحد على الشاشات الأصغر */
+}
+#skills{
+    padding: 50px 210px;
+}
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-content {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    .image-content{
+        justify-content: center;
+        max-width: 70%;
+    }
+    .image-content img{
+        margin-top: 11%;
+    }
+    .nav a img{
+        width: 50%;
+    }
+     /* Responsive Services Section */
+     .services-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .services-section p {
+        font-size: 0.9rem;
+        line-height: 1.3;
+        padding: 0 15px;
+    }
+
+    .nav a img {
+        width: 50%;
+    }
+    .testimonial-grid {
+grid-template-columns: 1fr; /* 1 item in a row */
+}
+
+.testimonials h2 {
+font-size: 1.5rem;
+}
+
+.testimonial-item p {
+font-size: 0.9rem;
+}
+
+.testimonial-item h6 {
+font-size: 1rem;}
+.highlight-card h2{
+margin-left:30%;
+}
+#skills {
+    padding: 50px 90px;
+}
+.skill-box{
+    margin-left: -40%;
+}
+}
